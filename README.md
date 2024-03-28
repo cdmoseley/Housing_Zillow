@@ -16,7 +16,7 @@ During a PCS, is buying a home a better investment than other means (living on p
 ## 3. Provide practical estimates for ROI at Fort Stewart, GA using historical data
 
 # About the Dataset
-<img width="258" alt="Screenshot 2024-03-28 at 2 06 38 PM" src="https://github.com/cdmoseley/Housing_Zillow/assets/161170070/26632301-4631-4be7-b91e-e92cf405781c">
+<img width="500" alt="Screenshot 2024-03-28 at 2 06 38 PM" src="https://github.com/cdmoseley/Housing_Zillow/assets/161170070/26632301-4631-4be7-b91e-e92cf405781c">
 
 This dataset was pulled off of Zillow. Many people have likely encountered Zillow at some point, either actively looking for a home to buy/rent, or just dreaming for that future house they would like to live in one day.
 
@@ -80,13 +80,13 @@ State_Group_df = New_Past_df.groupby(['State', 'Date']).mean()
 ```
 
 # Home Values By State From 2000 - 2024
-<img width="360" alt="Screenshot 2024-03-28 at 2 08 05 PM" src="https://github.com/cdmoseley/Housing_Zillow/assets/161170070/64540917-3e68-4211-9faf-425b114448c9">
+<img width="700" alt="Screenshot 2024-03-28 at 2 08 05 PM" src="https://github.com/cdmoseley/Housing_Zillow/assets/161170070/64540917-3e68-4211-9faf-425b114448c9">
 
 After plotting, the key takeaway was the all home values increased across states during this time period. Some key notes is that there is a steep increase in 2021, directly tied in around the time of COVID-19. Lastly of note, the two highest were Hawaii and California around $875,000 and and the lowest was West Virginia around $141,000 (Someone PCS'ing from California to West Virginia could probably afford a really nice home if they timed it correctly). 
 
 # Home Values By State from 2018 - 2024 
 
-<img width="351" alt="Screenshot 2024-03-28 at 2 08 48 PM" src="https://github.com/cdmoseley/Housing_Zillow/assets/161170070/df47e800-b39c-4720-b763-9547c9390dd4">
+<img width="700" alt="Screenshot 2024-03-28 at 2 08 48 PM" src="https://github.com/cdmoseley/Housing_Zillow/assets/161170070/df47e800-b39c-4720-b763-9547c9390dd4">
 
 Here I analyzed the home values from 2018 - 2024 because I wanted to take a closer look at the impact of COVID -19. 
 
@@ -102,16 +102,16 @@ https://github.com/cdmoseley/Housing_Zillow/assets/161170070/89594980-e231-4815-
 Here we have an animated heatmap that displays how home values have increased over time by state. As you can see, the mean values on the right go up over time, and different states actually take on different home values in comparison to other states over time. The darker the state, the higher the mean is for that state. 
 
 # Home Values According to the Time of Year 
-<img width="190" alt="Screenshot 2024-03-28 at 2 11 09 PM" src="https://github.com/cdmoseley/Housing_Zillow/assets/161170070/048988b2-c402-4da1-b70c-a08cf0231d66">
+<img width="400" alt="Screenshot 2024-03-28 at 2 11 09 PM" src="https://github.com/cdmoseley/Housing_Zillow/assets/161170070/048988b2-c402-4da1-b70c-a08cf0231d66">
 
-<img width="189" alt="Screenshot 2024-03-28 at 2 11 15 PM" src="https://github.com/cdmoseley/Housing_Zillow/assets/161170070/80de3f46-3b2e-4369-a63c-4a787cd72e80">
+<img width="400" alt="Screenshot 2024-03-28 at 2 11 15 PM" src="https://github.com/cdmoseley/Housing_Zillow/assets/161170070/80de3f46-3b2e-4369-a63c-4a787cd72e80">
 
 Here I analyzed the fluctuations in home values according to the time of year. I was curious if the month or weather played any factors on the home values. If you look at the bar graph on the left, that shows they are all about the same across the board. However, the line graph to the right of that is a data pull of 3 years, specifically 2015 - 2018, looking at Raleigh, NC. The data appears to be mostly linear, but we do see tiny fluctuations around the same time of year and see on average the the fall months appear to have a slightly sharper increase. 
 
 While further research on other cities is needed to come to a deterministic solution, this initial conclusion that season doesn't play a huge factor is actually helpful to the Military, specifically since soldiers don't have a ton of autonomy to choose when they buy/sell to their PCS orders largely being dictated by higher headquarters. 
 
 # ROI Formula for this Project 
-<img width="456" alt="Screenshot 2024-03-28 at 2 11 59 PM" src="https://github.com/cdmoseley/Housing_Zillow/assets/161170070/22d05450-fe87-4949-ba67-bbe9a23c2900">
+<img width="550" alt="Screenshot 2024-03-28 at 2 11 59 PM" src="https://github.com/cdmoseley/Housing_Zillow/assets/161170070/22d05450-fe87-4949-ba67-bbe9a23c2900">
 
 So now moving into Return On Investment or ROI. 
 
@@ -132,7 +132,7 @@ This was important for the practical application at the end of this presentation
 
 # ROI 2021 - 2024 
 
-<img width="332" alt="Screenshot 2024-03-28 at 2 12 44 PM" src="https://github.com/cdmoseley/Housing_Zillow/assets/161170070/296eac08-f717-4eb0-93c3-15812b218256">
+<img width="700" alt="Screenshot 2024-03-28 at 2 12 44 PM" src="https://github.com/cdmoseley/Housing_Zillow/assets/161170070/296eac08-f717-4eb0-93c3-15812b218256">
 
 This is a graph showing the ROI by state from 2021 - 2024. On the y-axis you see the Growth % or ROI and on hte x-axis the bars are the states. The key take away from the cart is that the state a military base is located in does appear to play a factor in ROI. 
 
@@ -143,7 +143,7 @@ The highest growth was Florida at 47.09%, so if you are stationed at Eglin Air F
 
 # ROI July 2022 - Present 
 
-<img width="296" alt="Screenshot 2024-03-28 at 2 13 22 PM" src="https://github.com/cdmoseley/Housing_Zillow/assets/161170070/d74445a1-f2de-4cbb-9c38-4aeb0aaf8482">
+<img width="700" alt="Screenshot 2024-03-28 at 2 13 22 PM" src="https://github.com/cdmoseley/Housing_Zillow/assets/161170070/d74445a1-f2de-4cbb-9c38-4aeb0aaf8482">
 
 This is a similar chart to the previous one, lookng at ROI over time, but this time only from July of 2022 (that peak of the COVID-19 housing spike) to the prsent. 
 
@@ -153,7 +153,7 @@ Some key differences are that there are 18 States in the negative now versus one
 
 # PCS Quick Reference Map Chart 
 
-<img width="444" alt="Screenshot 2024-03-28 at 2 13 48 PM" src="https://github.com/cdmoseley/Housing_Zillow/assets/161170070/6b106d23-c94b-4e23-8343-ceb06b3a287b">
+<img width="700" alt="Screenshot 2024-03-28 at 2 13 48 PM" src="https://github.com/cdmoseley/Housing_Zillow/assets/161170070/6b106d23-c94b-4e23-8343-ceb06b3a287b">
 
 This is a heatmap that illustrates the bars in the last slide. This could be a key tool for soliders to use as a quick reference to see if the state they are PCS'ing to has a high or low ROI. 
 
@@ -163,7 +163,7 @@ Once again, the darker colors represnt higher ROI (We said Conneticut was the hi
 
 ## Distribution of Property Values 
 
-<img width="341" alt="Screenshot 2024-03-28 at 2 14 22 PM" src="https://github.com/cdmoseley/Housing_Zillow/assets/161170070/2a7ef35b-f9b6-4a94-ba47-77d8ce7c74e4">
+<img width="700" alt="Screenshot 2024-03-28 at 2 14 22 PM" src="https://github.com/cdmoseley/Housing_Zillow/assets/161170070/2a7ef35b-f9b6-4a94-ba47-77d8ce7c74e4">
 
 Now we are starting to get into the practical analysis for soldiers by rank. Specifically, here I focused my search anad analysi for soldiers at Fort Stewart but the same can be assumed for Soldiers at Fort Eisenhower as they are also in Georgia. 
 
@@ -173,7 +173,7 @@ The key take away from this model is that it appears to be fairly normal (slight
 
 ## BAH 
 
-<img width="506" alt="Screenshot 2024-03-28 at 2 14 50 PM" src="https://github.com/cdmoseley/Housing_Zillow/assets/161170070/359be1ad-f875-4eb5-aecb-4556c41d0d7b">
+<img width="700" alt="Screenshot 2024-03-28 at 2 14 50 PM" src="https://github.com/cdmoseley/Housing_Zillow/assets/161170070/359be1ad-f875-4eb5-aecb-4556c41d0d7b">
 
 Here is the BAH chart for Fort Stewart by rank. 
 
@@ -181,7 +181,7 @@ For my analysis, I will be determining what rank of soldiers can afford differen
 
 ## FSGA July 2022 - Present ROI 
 
-<img width="547" alt="Screenshot 2024-03-28 at 2 15 17 PM" src="https://github.com/cdmoseley/Housing_Zillow/assets/161170070/ea01c513-dfc6-4079-9989-6163000a6d7e">
+<img width="700" alt="Screenshot 2024-03-28 at 2 15 17 PM" src="https://github.com/cdmoseley/Housing_Zillow/assets/161170070/ea01c513-dfc6-4079-9989-6163000a6d7e">
 
 So, extrapolating the GA average of 3.84% of ROI from July 2022 that peak of COVID, and the present, here are the values that each rank could have gained if they bought a home during this time period. 
 
@@ -191,12 +191,12 @@ Here the min being $960 for a $25,000 home and the max around $14,400 for a $375
 
 ## FSGA JAN 2021 - Present ROI 
 
-<img width="547" alt="Screenshot 2024-03-28 at 2 15 17 PM" src="https://github.com/cdmoseley/Housing_Zillow/assets/161170070/d500bf29-418f-4e33-9a18-3815f27b0f3d">
+<img width="700" alt="Screenshot 2024-03-28 at 2 15 17 PM" src="https://github.com/cdmoseley/Housing_Zillow/assets/161170070/d500bf29-418f-4e33-9a18-3815f27b0f3d">
 
 However, we can see here the results are much different had a soldier bought a home in January of 2021 and held onto it. Now, the value gained ranges from $7,610 to $114,150 depending on the cost of the home. 
 
 ## Combined Charts for Estimate 
-<img width="544" alt="Screenshot 2024-03-28 at 2 15 27 PM" src="https://github.com/cdmoseley/Housing_Zillow/assets/161170070/3534e8b8-b209-4de6-888b-e1a915922170">
+<img width="700" alt="Screenshot 2024-03-28 at 2 15 27 PM" src="https://github.com/cdmoseley/Housing_Zillow/assets/161170070/3534e8b8-b209-4de6-888b-e1a915922170">
 
 Using the data from this analysis, I created a range of values a soldier could reasonably assume their future ROI would be between in GA. 
 
