@@ -178,37 +178,40 @@ Key things to note was the average mortgage for that home value bin was calculat
 
 Here the min being $960 for a $25,000 home and the max around $14,400 for a $375,000 home. 
 
+## FSGA JAN 2021 - Present ROI 
+
 *FSGA JAN 2021 - PRESENT ROI CHART* 
 
 However, we can see here the results are much different had a soldier bought a home in January of 2021 and held onto it. Now, the value gained ranges from $7,610 to $114,150 depending on the cost of the home. 
 
+## Combined Charts for Estimate 
 *Fort Stewart, GA ROI Estimate* 
 
 Using the data from this analysis, I created a range of values a soldier could reasonably assume their future ROI would be between in GA. 
 
 You'll notice in places that there is a fairly wide gap in the range, specifically as the home values get higher, but the key takeaway for a soldier should be in both cases it is positive and they can reasonably expect that future ROI will fall in that range.
 
-RECOMMENDATIONS AND CONCLUSIONS 
+# Recommendations and Conclusions 
 So, is buying a home a better investment than living on post or renting off-post....
-The answer is Probably, but it depends!
+**The answer is Probably, but it depends!**
 
 We established that on average there is a positive ROI across the nation, but just as with any investment, there is always a possibility of going in the negative. 
 
 From our analysis, some factors to consider as you mvoe next are: 
 
-- Post Location = Specifially use the heat map and bar chart to determine if you're post is located in a state with historically high or low ROI 
+1. Post Location = Specifially use the heat map and bar chart to determine if you're post is located in a state with historically high or low ROI 
 
-- Another one is that we can't typically predict Major World Events = We looked at increase due to Covid, but an example of house prices moving in the opposite direction would be the subprime mortgage crisis from 2007 – 2008. 
+2. Another one is that we can't typically predict Major World Events = We looked at increase due to Covid, but an example of house prices moving in the opposite direction would be the subprime mortgage crisis from 2007 – 2008. 
 
--Actual time before selling the house= You also want to consider if you do plan to sell your house after 3 years or if you're holding onto it to rent out and sell down the road. 
+3. Actual time before selling the house= You also want to consider if you do plan to sell your house after 3 years or if you're holding onto it to rent out and sell down the road. 
 
--Cost of maintenance = A lot of homes require unforseen maintenance. Hopefully you have good insurance for anything major that may happen, but since the ROI calculation did not account for a "Risk Factor" soldiers should consider if the estimated ROI is greater than their expected cost of maintenance. This may also include any improvements they want to add to the property. 
+4. Cost of maintenance = A lot of homes require unforseen maintenance. Hopefully you have good insurance for anything major that may happen, but since the ROI calculation did not account for a "Risk Factor" soldiers should consider if the estimated ROI is greater than their expected cost of maintenance. This may also include any improvements they want to add to the property. 
 
--Also want to consider other hidden costs. If you live off post, do you have to pay extra for gas due to your further drive, do you have an expensive HOA etc. 
+5. Also want to consider other hidden costs. If you live off post, do you have to pay extra for gas due to your further drive, do you have an expensive HOA etc. 
 
--Lastly just happiness factors = My wife always says we are building a home and not a house. At the end of the day, you have to do what is right for your self and your family. If that means you are willing to lose some money for the sake of your sanity and well-being, I think that's the best investment you can make. 
+6. Lastly just happiness factors = My wife always says we are building a home and not a house. At the end of the day, you have to do what is right for your self and your family. If that means you are willing to lose some money for the sake of your sanity and well-being, I think that's the best investment you can make. 
 
-Future Study and Application 
+# Future Study and Application 
 Some things I did not go into with my analysis is if there was a difference in ROI around a military installation vs the rest of the nation, if there was a difference in percent growth/ROI with different home values and maybe the difference between ROI on home stypes. 
 
 In future study and more accurate prediction, time series analysis would prove to be more useful than extrapolating the historical data as I did in this study. 
