@@ -1,22 +1,22 @@
-Introduction 
+# **Introduction**
 Each year, more than 400,000 service members make a permanent change of station (PCS), causing them to pick up their place of residence and move across the state, country, or world to begin their next job. The COVID-19 pandemic has affected the real estate market in many ways, but significantly it caused a surge in housing prices across the United States. Now more than ever, soldiers need data analysis to improve their decision making to buy, rent, or live on post. 
 
-Research Question
+# **Research Question**
 During a PCS, is buying a home a better investment than other means (living on post, renting off-post)? 
 
-Objectives 
-1. Home Values Analysis: 
-a. How do Home Values trend from 2000 – 2024? 
-b. Do Home Values fluctuate with the Calendar season? 
+# **Objectives**
+## 1. Home Values Analysis: 
+### a. How do Home Values trend from 2000 – 2024? 
+### b. Do Home Values fluctuate with the Calendar season? 
 
-2. Return on Investment (ROI) Analysis: 
-a. Does location of Military post in the nation affect ROI? 
-b. How did COVID-19 affect ROI?
+## 2. Return on Investment (ROI) Analysis: 
+### a. Does location of Military post in the nation affect ROI? 
+### b. How did COVID-19 affect ROI?
 
-3. Provide practical estimates for ROI at Fort Stewart, GA using historical data
+## 3. Provide practical estimates for ROI at Fort Stewart, GA using historical data
 
-About the Dataset
-This dataset was pulled off of Zillow. Many people have likely encountered Zillow at some point, either actively looking for a home to buy/rent, or just dreaming for that future dream house you would like to live in one day.
+# About the Dataset
+This dataset was pulled off of Zillow. Many people have likely encountered Zillow at some point, either actively looking for a home to buy/rent, or just dreaming for that future house they would like to live in one day.
 
 On its database, Zillow currently possesses 135 million properties and 48.11% of real estate website traffic is through Zillow. This is substantial considering how many different real estate websites exist. 
 
@@ -26,6 +26,7 @@ The dataset I chose to analyze for this project was the Zillow Home Value Index 
 
 Lastly, just a note of the Zestimate, this is something internal that Zillow produces based on an algorithm that analyzes several factors, to include data from public property records, tax reords, recent home sales, and user-submitted information. 
 
+# Initial Data Analysis
 First, I read in my data: 
 Past_df = pd.read_csv('Data/Housing_Zillow_Past.csv')
 
@@ -43,6 +44,7 @@ print(max_null_column)
 average_null_counts = null_counts.mean()
 print(average_null_counts)
 
+# Initial Cleaning 
 Then I started cleaning the data. I did not want 'RegionID' because I thought I would mix this up with 'RegionName', which is the actual Zip Code. 
 
 del Past_df['RegionID']
@@ -57,7 +59,7 @@ def melt_data(df):
 
 dfm = melt_data(Past_df)
 
-Exploratory Data Analysis
+# Exploratory Data Analysis
 Moving into the exploratory data analysis, I wanted to look at how the home values were trending by state across time. To do this, I had to delete the columns I didn't want for this dataframe and then group by state. 
 
 New_Past_df = dfm.copy()
@@ -70,9 +72,13 @@ del New_Past_df['Metro']
 del New_Past_df['CountyName']
 State_Group_df = New_Past_df.groupby(['State', 'Date']).mean()
 
+# Home Values By State From 2000 - 2024
+
 *HOME VALUES BY STATE FROM 2000 - 2024*
 
 After plotting, the key takeaway was the all home values increased across states during this time period. Some key notes is that there is a steep increase in 2021, directly tied in around the time of COVID-19. Lastly of note, the two highest were Hawaii and California around $875,000 and and the lowest was West Virginia around $141,000 (Someone PCS'ing from California to West Virginia could probably afford a really nice home if they timed it correctly). 
+
+# Home Values By State from 2018 - 2024 
 
 *HOME VALUES BY STATE FROM 2018 - 2024* 
 
@@ -86,25 +92,34 @@ This is slightly concerning for prediction and will likely create a broad range 
 
 Here we have an animated heatmap that displays how home values have increased over time by state. As you can see, the mean values on the right go up over time, and different states actually take on different home values in comparison to other states over time. The darker the state, the higher the mean is for that state. 
 
+# Home Values According to the Time of Year 
 *SEASONAL FLUCTUATIONS IN HOME VALUES BAR CHART AND LINE CHART* 
 
 Here I analyzed the fluctuations in home values according to the time of year. I was curious if the month or weather played any factors on the home values. If you look at the bar graph on the left, that shows they are all about the same across the board. However, the line graph to the right of that is a data pull of 3 years, specifically 2015 - 2018, looking at Raleigh, NC. The data appears to be mostly linear, but we do see tiny fluctuations around the same time of year and see on average the the fall months appear to have a slightly sharper increase. 
 
 While further research on other cities is needed to come to a deterministic solution, this initial conclusion that season doesn't play a huge factor is actually helpful to the Military, specifically since soldiers don't have a ton of autonomy to choose when they buy/sell to their PCS orders largely being dictated by higher headquarters. 
 
+# ROI Formuala for this Project 
 *ROI CALCULATION BASIC* 
 
 So now moving into Return On Investment or ROI. 
 
 For the sake of this model, I provided a very basic calculation for ROI. I just said it was the percent growth of the selling price vs. the cost to buy the house. 
 
+## Assumptions
 There are a few important assumptions I made here. 
 
-First, that there is no BAH (Basic Housing Allowance) profit/loss. This goes for those buying a home and for those renting a home. My assumption was that their mortgage and utilities, or rent and utilities absolutely maxed out their BAH for that month. 
+1. First, that there is no BAH (Basic Housing Allowance) profit/loss.
 
-The reason this is important is that it doesn't allow for one to calculate the extra income lost or gained with BAH. It also allows an accurate comparison to those living on post, who we assume a 0% ROI automatically because although their housing is paid for, they do not gain anything when moving. 
+This goes for those buying a home and for those renting a home. My assumption was that their mortgage and utilities, or rent and utilities absolutely maxed out their BAH for that month.The reason this is important is that it doesn't allow for one to calculate the extra income lost or gained with BAH. It also allows an accurate comparison to those living on post, who we assume a 0% ROI automatically because although their housing is paid for, they do not gain anything when moving. 
 
-The other two assumptions I made was that the housing was based on a fixed-rate mortgage, which was important for the practical application at the end of this presentation, and that soldiers sold their house after 3-years because this was the average time a soldier spends on station. This allowed me to focus in on 3-year time periods for the analysis. 
+2. The housing was based on a fixed-rate mortgage
+
+This was important for the practical application at the end of this presentation
+
+3. That soldiers sold their house after 3-years because this was the average time a soldier spends on station. This allowed me to focus in on 3-year time periods for the analysis. 
+
+# ROI 2021 - 2024 
 
 *ROI 2021 - 2024 (Average Soldier PCS) BAR CHART* 
 
@@ -115,6 +130,8 @@ A key note for this graph is that it is from JAN ‘21 – JAN ’24 Data, which
 
 The highest growth was Florida at 47.09%, so if you are stationed at Eglin Air Force base during this time you are probably doing really well when you sell your house. However, the highest value growth was Hawaii at $193,000. The reason there is a difference between the ROI and the Value growth has to do with teh mean values of homes in both areas, with Hawaii being significatnly higher as discussed earlier. 
 
+# ROI July 2022 - Present 
+
 *ROI: July 2022 - Present (COVID -19) BAR CHART* 
 
 This is a similar chart to the previous one, lookng at ROI over time, but this time only from July of 2022 (that peak of the COVID-19 housing spike) to the prsent. 
@@ -123,11 +140,17 @@ The key takeaway from this especially in comparison to the previous graph is tha
 
 Some key differences are that there are 18 States in the negative now versus one and the highest ROI rather than being near 50% is now actually only 10.7% with conneticut. The lowest growth hear was Mississippi with a -6.5% ROI and the lowest value growth on average being Nevada at -$27,000. 
 
+# PCS Quick Reference Map Chart 
+
 *PCS Quick Reference Map chart* 
 
 This is a heatmap that illustrates the bars in the last slide. This could be a key tool for soliders to use as a quick reference to see if the state they are PCS'ing to has a high or low ROI. 
 
 Once again, the darker colors represnt higher ROI (We said Conneticut was the highest and yellow and lighter colors represent lower ROI (We said Louisiana and Nevada being the lowest value growth and ROI). 
+
+# Practical Application to Fort Stewart Soldiers 
+
+## Distribution of Property Values 
 
 *Distribution of Property Values in GA Chart* 
 
@@ -137,11 +160,15 @@ This model displays the value distribution of properties in Georgia. As a reimde
 
 The key take away from this model is that it appears to be fairly normal (slight skey to eh right) and all the homes of soliders at Fort Stewart (that they can afford with BAH) fall within one standard distribution of hte mean, so we can reasonably extrapolate this data to provide some meaningful conclsuiosn to soldiers at Fort Stewart. 
 
+## BAH 
+
 *BAH Chart* 
 
 Here is the BAH chart for Fort Stewart by rank. 
 
 For my analysis, I will be determining what rank of soldiers can afford different values of homes and primarily used this as my means for conducting that analysis. 
+
+## FSGA July 2022 - Present ROI 
 
 *FSGA JULY 2022 - Present ROI CHART* 
 
