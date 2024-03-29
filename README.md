@@ -165,8 +165,7 @@ Here is the BAH chart for Fort Stewart by rank.
 For my analysis, I will be determining what rank of soldiers can afford different values of homes and primarily used this as my means for conducting that analysis. 
 
 ## FSGA July 2022 - Present ROI 
-
-<img width="700" alt="Screenshot 2024-03-28 at 2 15 17 PM" src="https://github.com/cdmoseley/Housing_Zillow/assets/161170070/ea01c513-dfc6-4079-9989-6163000a6d7e">
+<img width="700" alt="Screenshot 2024-03-29 at 11 13 45 AM" src="https://github.com/cdmoseley/Housing_Zillow/assets/161170070/e55baeb8-2050-4a50-9ec9-3113f5ff5e71">
 
 So, extrapolating the GA average of 3.84% of ROI from July 2022 that peak of COVID, and the present, here are the values that each rank could have gained if they bought a home during this time period. 
 
@@ -175,13 +174,13 @@ Key things to note was the average mortgage for that home value bin was calculat
 Here the min being $960 for a $25,000 home and the max around $14,400 for a $375,000 home. 
 
 ## FSGA JAN 2021 - Present ROI 
-
-<img width="700" alt="Screenshot 2024-03-28 at 2 15 17 PM" src="https://github.com/cdmoseley/Housing_Zillow/assets/161170070/d500bf29-418f-4e33-9a18-3815f27b0f3d">
+<img width="694" alt="Screenshot 2024-03-29 at 11 13 52 AM" src="https://github.com/cdmoseley/Housing_Zillow/assets/161170070/0828e031-3899-4134-96c4-423d60fa9422">
 
 However, we can see here the results are much different had a soldier bought a home in January of 2021 and held onto it. Now, the value gained ranges from $7,610 to $114,150 depending on the cost of the home. 
 
 ## Combined Charts for Estimate 
-<img width="700" alt="Screenshot 2024-03-28 at 2 15 27 PM" src="https://github.com/cdmoseley/Housing_Zillow/assets/161170070/3534e8b8-b209-4de6-888b-e1a915922170">
+
+<img width="700" alt="Screenshot 2024-03-29 at 11 14 00 AM" src="https://github.com/cdmoseley/Housing_Zillow/assets/161170070/15077302-23a4-46cf-ae18-ec1cd135a28a">
 
 Using the data from this analysis, I created a range of values a soldier could reasonably assume their future ROI would be between in GA. 
 
