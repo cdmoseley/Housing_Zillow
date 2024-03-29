@@ -4,17 +4,6 @@ Each year, more than 400,000 service members make a permanent change of station 
 # **Research Question**
 During a PCS, is buying a home a better investment than other means (living on post, renting off-post)? 
 
-# **Objectives**
-## 1. Home Values Analysis: 
-### a. How do Home Values trend from 2000 – 2024? 
-### b. Do Home Values fluctuate with the Calendar season? 
-
-## 2. Return on Investment (ROI) Analysis: 
-### a. Does location of Military post in the nation affect ROI? 
-### b. How did COVID-19 affect ROI?
-
-## 3. Provide practical estimates for ROI at Fort Stewart, GA using historical data
-
 # About the Dataset
 <img width="500" alt="Screenshot 2024-03-28 at 2 06 38 PM" src="https://github.com/cdmoseley/Housing_Zillow/assets/161170070/26632301-4631-4be7-b91e-e92cf405781c">
 
