@@ -5,7 +5,7 @@ Every year, over 400,000 service members undergo a permanent change of station (
 During a PCS, is buying a home a better investment than other means (living on post, renting off-post)? 
 
 # About the Dataset
-<img width="500" alt="Screenshot 2024-03-28 at 2 06 38 PM" src="https://github.com/cdmoseley/Housing_Zillow/assets/161170070/26632301-4631-4be7-b91e-e92cf405781c">
+<img align="left" img width="300" alt="Screenshot 2024-03-28 at 2 06 38 PM" src="https://github.com/cdmoseley/Housing_Zillow/assets/161170070/26632301-4631-4be7-b91e-e92cf405781c">
 
 This dataset comes straight from Zillow, a site many of us have probably browsed while searching for our next home or just daydreaming about what our dream home might look like. Zillow's got a massive database—135 million properties, to be exact—and it's a big player in the real estate scene, pulling in nearly half of all real estate website traffic.
 
@@ -67,15 +67,14 @@ State_Group_df = New_Past_df.groupby(['State', 'Date']).mean()
 ```
 
 # Home Values By State From 2000 - 2024
-<img width="700" alt="Screenshot 2024-03-28 at 5 50 52 PM" src="https://github.com/cdmoseley/Housing_Zillow/assets/161170070/1efdd568-e50b-4e92-b309-414fc2e0c612">
+<img width="900" alt="Screenshot 2024-03-28 at 5 50 52 PM" src="https://github.com/cdmoseley/Housing_Zillow/assets/161170070/1efdd568-e50b-4e92-b309-414fc2e0c612">
 
 Upon examining the plotted data, a notable trend emerges: all home values experienced a significant uptick across states within the specified timeframe. A particularly striking surge occurred in 2021, coinciding directly with the onset of the COVID-19 pandemic. Noteworthy observations include the substantial rise in home values during this period.
 
 Of particular interest are the extremes: California, which I made bold in order to better see the fluctuations in the market, boasted the highest average home values, hovering around $875,000, while West Virginia claimed the lowest, averaging around $141,000. This discrepancy suggests that someone undergoing a PCS from California to West Virginia might find themselves in a prime position to secure a considerably upscale residence, given the right timing.
 
 # Home Values By State from 2018 - 2024 
-
-<img width="570" alt="Screenshot 2024-03-28 at 6 06 19 PM" src="https://github.com/cdmoseley/Housing_Zillow/assets/161170070/ecfaba15-684e-4720-839e-095f2eace42d">
+<img width="900" alt="Screenshot 2024-03-28 at 6 06 19 PM" src="https://github.com/cdmoseley/Housing_Zillow/assets/161170070/ecfaba15-684e-4720-839e-095f2eace42d">
 
 In examining home values spanning from 2018 to 2024, I aimed to dissect the nuanced impact of the COVID-19 pandemic. The analysis uncovered a discernible pattern: a steady uptick in prices beginning in 2021, reaching a notable peak around mid-2022. Following this peak, there was a modest decline, followed by a period of relative stability in home values.
 
@@ -87,9 +86,9 @@ https://github.com/cdmoseley/Housing_Zillow/assets/161170070/58cad2d3-4e50-45ed-
 Here we have an animated heatmap that displays how home values have increased over time by state. As you can see, the mean values on the right go up over time, and different states actually take on different home values in comparison to other states over time. The darker the state, the higher the mean is for that state. 
 
 # Home Values According to the Time of Year 
-<img width="400" alt="Screenshot 2024-03-28 at 2 11 09 PM" src="https://github.com/cdmoseley/Housing_Zillow/assets/161170070/048988b2-c402-4da1-b70c-a08cf0231d66">
+<img width="500" alt="Screenshot 2024-03-28 at 2 11 09 PM" src="https://github.com/cdmoseley/Housing_Zillow/assets/161170070/048988b2-c402-4da1-b70c-a08cf0231d66">
 
-<img width="400" alt="Screenshot 2024-03-28 at 2 11 15 PM" src="https://github.com/cdmoseley/Housing_Zillow/assets/161170070/80de3f46-3b2e-4369-a63c-4a787cd72e80">
+<img width="500" alt="Screenshot 2024-03-28 at 2 11 15 PM" src="https://github.com/cdmoseley/Housing_Zillow/assets/161170070/80de3f46-3b2e-4369-a63c-4a787cd72e80">
 
 In this analysis, I explored fluctuations in home values concerning the time of year, aiming to discern whether factors such as month or weather exerted any notable influence. The bar graph on the left provides a comprehensive overview, indicating relatively consistent values across different time periods.
 
@@ -98,67 +97,63 @@ However, the line graph adjacent to it draws from a three-year dataset spanning 
 While it's imperative to conduct further research encompassing additional cities to arrive at a conclusive understanding, this initial finding—that seasonal variations may not significantly impact home values—holds practical significance, particularly for military personnel. Given the constrained autonomy soldiers often face in timing their home transactions, dictated largely by PCS orders from higher headquarters, this insight proves invaluable in informing housing decisions amidst shifting seasons.
 
 # ROI Formula for this Project 
-<img width="550" alt="Screenshot 2024-03-28 at 2 11 59 PM" src="https://github.com/cdmoseley/Housing_Zillow/assets/161170070/22d05450-fe87-4949-ba67-bbe9a23c2900">
+<img width="650" alt="Screenshot 2024-03-28 at 2 11 59 PM" src="https://github.com/cdmoseley/Housing_Zillow/assets/161170070/22d05450-fe87-4949-ba67-bbe9a23c2900">
 
 Now, let's talk about Return On Investment (ROI). To keep things simple, I've come up with a basic calculation method for this model. ROI is basically just the percent increase in the selling price compared to what you originally paid for the house. It's a straightforward way to see how your investment is doing.
 
 ## Assumptions
-There are a few important assumptions I made here. 
 
-1. First, that there is no BAH (Basic Housing Allowance) profit/loss.
+Here are a few important assumptions I've made:
 
-This goes for those buying a home and for those renting a home. My assumption was that their mortgage and utilities, or rent and utilities absolutely maxed out their BAH for that month.The reason this is important is that it doesn't allow for one to calculate the extra income lost or gained with BAH. It also allows an accurate comparison to those living on post, who we assume a 0% ROI automatically because although their housing is paid for, they do not gain anything when moving. 
+1. I've assumed that there's no profit or loss from the Basic Housing Allowance (BAH). Whether someone is buying or renting a home, I've assumed that their mortgage or rent, plus utilities, completely utilizes their BAH for that month. This is crucial because it eliminates the possibility of calculating any extra income gained or lost through BAH. It also enables a fair comparison to those living on post, where we assume a 0% ROI automatically since their housing is covered, but they don't accrue any additional benefits from moving.
 
-2. The housing was based on a fixed-rate mortgage
+2. The housing arrangements were based on a fixed-rate mortgage. This choice was made for practical reasons, especially for the application at the end of this presentation.
 
-This was important for the practical application at the end of this presentation
+3. I've assumed that soldiers sell their houses after three years, as this is the average duration a soldier typically spends at a station. This allows me to focus on analyzing three-year time periods for the study.
 
-3. That soldiers sold their house after 3-years because this was the average time a soldier spends on station. This allowed me to focus in on 3-year time periods for the analysis. 
+4. Lastly, I've disregarded any significant dollar value invested into the principal over the three years. This simplification helps streamline the analysis while maintaining a consistent framework.
 
 # ROI 2021 - 2024 
 
-<img width="700" alt="Screenshot 2024-03-28 at 2 12 44 PM" src="https://github.com/cdmoseley/Housing_Zillow/assets/161170070/296eac08-f717-4eb0-93c3-15812b218256">
+<img width="900" alt="Screenshot 2024-03-28 at 2 12 44 PM" src="https://github.com/cdmoseley/Housing_Zillow/assets/161170070/296eac08-f717-4eb0-93c3-15812b218256">
 
-This is a graph showing the ROI by state from 2021 - 2024. On the y-axis you see the Growth % or ROI and on hte x-axis the bars are the states. The key take away from the cart is that the state a military base is located in does appear to play a factor in ROI. 
+This graph illustrates the ROI by state from 2021 to 2024, with the y-axis representing Growth % or ROI and the x-axis displaying the states. The key takeaway from this chart is the discernible impact of the state where a military base is situated on ROI.
 
-Of note, In all states but one (Louisiana) during this time period, there was a positive ROI. 
-A key note for this graph is that it is from JAN ‘21 – JAN ’24 Data, which Doesn’t allow for seasonal adjustments, but it does Encapsulate the bulk of COVID-19 spike. 
+Notably, with the exception of Louisiana, all states experienced a positive ROI during this timeframe. It's important to note that this data covers the period from January 2021 to January 2024, lacking seasonal adjustments but encompassing the bulk of the COVID-19 spike.
 
-The highest growth was Florida at 47.09%, so if you are stationed at Eglin Air Force base during this time you are probably doing really well when you sell your house. However, the highest value growth was Hawaii at $193,000. The reason there is a difference between the ROI and the Value growth has to do with teh mean values of homes in both areas, with Hawaii being significatnly higher as discussed earlier. 
+Florida boasted the highest growth at 47.09%, indicating a favorable scenario for individuals stationed at Eglin Air Force Base during this period when selling their homes. However, it's worth mentioning that while Hawaii registered the highest value growth at $193,000, there's a disparity between ROI and value growth due to differences in the mean values of homes in both areas, with Hawaii notably higher as discussed earlier.
 
 # ROI July 2022 - Present 
 
-<img width="700" alt="Screenshot 2024-03-28 at 2 13 22 PM" src="https://github.com/cdmoseley/Housing_Zillow/assets/161170070/d74445a1-f2de-4cbb-9c38-4aeb0aaf8482">
+<img width="900" alt="Screenshot 2024-03-28 at 2 13 22 PM" src="https://github.com/cdmoseley/Housing_Zillow/assets/161170070/d74445a1-f2de-4cbb-9c38-4aeb0aaf8482">
 
-This is a similar chart to the previous one, lookng at ROI over time, but this time only from July of 2022 (that peak of the COVID-19 housing spike) to the prsent. 
+This chart resembles the previous one, focusing on ROI over time, but this time it spans from July 2022 (the peak of the COVID-19 housing spike) to the present.
 
-The key takeaway from this especially in comparison to the previous graph is that although there is still a little over a year of data to collect to accurately compare to the 3 year timeframe discussed in the last slide, we can reasonably assume that home value growth is trending slower after the COVID-19 housing spike in July and in times decreasing. 
+The standout observation here, especially when compared to the previous graph, is that although there's still a bit over a year of data needed to accurately compare with the three-year timeframe discussed earlier, it's becoming increasingly apparent that home value growth has slowed down post the COVID-19 housing spike in July and is now even showing signs of decline.
 
-Some key differences are that there are 18 States in the negative now versus one and the highest ROI rather than being near 50% is now actually only 10.7% with conneticut. The lowest growth hear was Mississippi with a -6.5% ROI and the lowest value growth on average being Nevada at -$27,000. 
+Some notable distinctions include the increased number of states experiencing negative ROI, jumping from one to eighteen. Additionally, the highest ROI, instead of hovering around 50%, is now a modest 10.7% with Connecticut. On the flip side, Mississippi recorded the lowest growth with a -6.5% ROI, while Nevada saw the lowest value growth on average, at -$27,000.
 
 # PCS Quick Reference Map Chart 
 
 <img width="700" alt="Screenshot 2024-03-28 at 2 13 48 PM" src="https://github.com/cdmoseley/Housing_Zillow/assets/161170070/6b106d23-c94b-4e23-8343-ceb06b3a287b">
 
-This is a heatmap that illustrates the bars in the last slide. This could be a key tool for soliders to use as a quick reference to see if the state they are PCS'ing to has a high or low ROI. 
+This heatmap provides a visual representation of the ROI bars depicted in the previous slide. It serves as a convenient tool for soldiers to quickly gauge whether the state they are PCS'ing to offers a high or low ROI.
 
-Once again, the darker colors represnt higher ROI (We said Conneticut was the highest and yellow and lighter colors represent lower ROI (We said Louisiana and Nevada being the lowest value growth and ROI). 
+Darker colors on the heatmap signify higher ROI, as exemplified by Connecticut, while lighter shades indicate lower ROI, as seen with Louisiana and Nevada. This intuitive color scheme allows for easy interpretation, enabling soldiers to make informed decisions based on the ROI prospects of their potential relocation destinations.
 
 # Practical Application to Fort Stewart Soldiers 
 
 ## Distribution of Property Values 
 
-<img width="700" alt="Screenshot 2024-03-28 at 2 14 22 PM" src="https://github.com/cdmoseley/Housing_Zillow/assets/161170070/2a7ef35b-f9b6-4a94-ba47-77d8ce7c74e4">
+<img width="900" alt="Screenshot 2024-03-28 at 2 14 22 PM" src="https://github.com/cdmoseley/Housing_Zillow/assets/161170070/2a7ef35b-f9b6-4a94-ba47-77d8ce7c74e4">
 
-Now we are starting to get into the practical analysis for soldiers by rank. Specifically, here I focused my search anad analysi for soldiers at Fort Stewart but the same can be assumed for Soldiers at Fort Eisenhower as they are also in Georgia. 
+In this segment, the focus narrows down to soldiers stationed at Fort Stewart, with potential generalization to those at Fort Eisenhower, both located in Georgia. The model presented here illustrates the distribution of property values across Georgia, where each bar represents the mean of properties within respective zip codes. Notably, outliers with counts of 1 have been excluded from the histogram for clarity.
 
-This model displays the value distribution of properties in Georgia. As a reimder, this is the mean of each Zipcode and not individual properties. There were some property zip codes extremely high to the right, but for the sake of the histogram I cut out any outliers with counts of 1. 
-
-The key take away from this model is that it appears to be fairly normal (slight skey to eh right) and all the homes of soliders at Fort Stewart (that they can afford with BAH) fall within one standard distribution of hte mean, so we can reasonably extrapolate this data to provide some meaningful conclsuiosn to soldiers at Fort Stewart. 
+The main takeaway from this analysis is the observed normality of the distribution, albeit with a slight rightward skew. Of significance is the finding that all homes within soldiers' affordability range, factoring in their Basic Allowance for Housing (BAH), fall within one standard deviation of the mean. This suggests that the insights derived from this analysis can reasonably inform soldiers stationed at Fort Stewart, aiding them in making informed decisions about their housing options.
 
 ## BAH 
 
-<img width="700" alt="Screenshot 2024-03-28 at 2 14 50 PM" src="https://github.com/cdmoseley/Housing_Zillow/assets/161170070/359be1ad-f875-4eb5-aecb-4556c41d0d7b">
+<img width="900" alt="Screenshot 2024-03-28 at 2 14 50 PM" src="https://github.com/cdmoseley/Housing_Zillow/assets/161170070/359be1ad-f875-4eb5-aecb-4556c41d0d7b">
 
 Here is the BAH chart for Fort Stewart by rank. 
 
