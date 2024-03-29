@@ -1,5 +1,5 @@
 # **Introduction**
-Each year, more than 400,000 service members make a permanent change of station (PCS), causing them to pick up their place of residence and move across the state, country, or world to begin their next job. The COVID-19 pandemic has affected the real estate market in many ways, but significantly it caused a surge in housing prices across the United States. Now more than ever, soldiers need data analysis to improve their decision making to buy, rent, or live on post. 
+Every year, over 400,000 service members undergo a permanent change of station (PCS), necessitating a relocation of their residence across states, countries, or even continents for their next assignment. The dynamic landscape of the real estate market, compounded by the unprecedented impact of the COVID-19 pandemic, has led to a notable surge in housing prices nationwide. In this context, there exists an urgent need for data analysis to empower soldiers in making informed decisions regarding property investment, rental choices, or opting for on-post housing accommodations.
 
 # **Research Question**
 During a PCS, is buying a home a better investment than other means (living on post, renting off-post)? 
@@ -7,15 +7,13 @@ During a PCS, is buying a home a better investment than other means (living on p
 # About the Dataset
 <img width="500" alt="Screenshot 2024-03-28 at 2 06 38 PM" src="https://github.com/cdmoseley/Housing_Zillow/assets/161170070/26632301-4631-4be7-b91e-e92cf405781c">
 
-This dataset was pulled off of Zillow. Many people have likely encountered Zillow at some point, either actively looking for a home to buy/rent, or just dreaming for that future house they would like to live in one day.
+This dataset comes straight from Zillow, a site many of us have probably browsed while searching for our next home or just daydreaming about what our dream home might look like. Zillow's got a massive database—135 million properties, to be exact—and it's a big player in the real estate scene, pulling in nearly half of all real estate website traffic.
 
-On its database, Zillow currently possesses 135 million properties and 48.11% of real estate website traffic is through Zillow. This is substantial considering how many different real estate websites exist. 
+What sets Zillow apart is its knack for gathering data. They have all sorts of datasets up for grabs, from forecasts on home values for the next month, quarter, or year, to info on rental housing stock and aggregated listings for sale. For this project, I honed in on the Zillow Home Value Index (ZHVI), which gives us a pulse on typical home values and market shifts across different regions and housing types. 
 
-One of the things Zillow does really well and is known for is its data collection. They have several datasets available to the public, to include Home Values Forecasts for the next month, quarter-ahead, and year-ahead, Rental housing stock information, aggregated for sale listings, breakdown of Information By Home Type and several more. 
+Now, while Zillow provides data down neighborhood level, I kept things broader, focusing on zip codes for my analysis.
 
-The dataset I chose to analyze for this project was the Zillow Home Value Index (ZHVI). This is a measure of the typical home value and market changes across a given region and housing type and housing type. It reflects the typical value for homes in the 35th to 65th percentile Range. While they offer data at different levels even all the way down to summarized by neighborhood, I chose to analyze by Zip code for the scope of this project. 
-
-Lastly, just a note of the Zestimate, this is something internal that Zillow produces based on an algorithm that analyzes several factors, to include data from public property records, tax reords, recent home sales, and user-submitted information. 
+Lastly, just to note the Zestimate, this is something internal that Zillow produces based on an algorithm that analyzes several factors. These include data from public property records, tax reords, recent home sales, and user-submitted information. 
 
 # Initial Data Analysis
 First, I read in my data: 
@@ -69,24 +67,22 @@ State_Group_df = New_Past_df.groupby(['State', 'Date']).mean()
 ```
 
 # Home Values By State From 2000 - 2024
-<img width="700" alt="Screenshot 2024-03-28 at 2 08 05 PM" src="https://github.com/cdmoseley/Housing_Zillow/assets/161170070/64540917-3e68-4211-9faf-425b114448c9">
+<img width="700" alt="Screenshot 2024-03-28 at 5 50 52 PM" src="https://github.com/cdmoseley/Housing_Zillow/assets/161170070/1efdd568-e50b-4e92-b309-414fc2e0c612">
 
-After plotting, the key takeaway was the all home values increased across states during this time period. Some key notes is that there is a steep increase in 2021, directly tied in around the time of COVID-19. Lastly of note, the two highest were Hawaii and California around $875,000 and and the lowest was West Virginia around $141,000 (Someone PCS'ing from California to West Virginia could probably afford a really nice home if they timed it correctly). 
+Upon examining the plotted data, a notable trend emerges: all home values experienced a significant uptick across states within the specified timeframe. A particularly striking surge occurred in 2021, coinciding directly with the onset of the COVID-19 pandemic. Noteworthy observations include the substantial rise in home values during this period.
+
+Of particular interest are the extremes: California, which I made bold in order to better see the fluctuations in the market, boasted the highest average home values, hovering around $875,000, while West Virginia claimed the lowest, averaging around $141,000. This discrepancy suggests that someone undergoing a PCS from California to West Virginia might find themselves in a prime position to secure a considerably upscale residence, given the right timing.
 
 # Home Values By State from 2018 - 2024 
 
-<img width="700" alt="Screenshot 2024-03-28 at 2 08 48 PM" src="https://github.com/cdmoseley/Housing_Zillow/assets/161170070/df47e800-b39c-4720-b763-9547c9390dd4">
+<img width="570" alt="Screenshot 2024-03-28 at 6 06 19 PM" src="https://github.com/cdmoseley/Housing_Zillow/assets/161170070/ecfaba15-684e-4720-839e-095f2eace42d">
 
-Here I analyzed the home values from 2018 - 2024 because I wanted to take a closer look at the impact of COVID -19. 
+In examining home values spanning from 2018 to 2024, I aimed to dissect the nuanced impact of the COVID-19 pandemic. The analysis uncovered a discernible pattern: a steady uptick in prices beginning in 2021, reaching a notable peak around mid-2022. Following this peak, there was a modest decline, followed by a period of relative stability in home values.
 
-This better displays that the prices began to increase in 2021 and kind of peaked around Mid-2022. After this, there appears to be an initial dip but values have been steady since then. 
-
-This is slightly concerning for prediction and will likely create a broad range of expected values using this historical data. I did not do a time series analysis for this project, but if I did, I would want to look at the seasonal decomposition, stationary analysis and choosing the best time series model for that if it passes the other metrics. 
+This observed trend presents a challenge in terms of predictive modeling, as the fluctuating trajectory complicates the task of forecasting future values with precision. Although a detailed time series analysis was not conducted in this project, the potential avenues for such exploration are intriguing. Were I to delve deeper, I would prioritize methodologies such as seasonal decomposition, assessing stationarity, and selecting the most suitable time series model based on rigorous evaluation metrics.
 
 
-https://github.com/cdmoseley/Housing_Zillow/assets/161170070/89594980-e231-4815-b937-e4cd9101a05f
-
-
+https://github.com/cdmoseley/Housing_Zillow/assets/161170070/58cad2d3-4e50-45ed-a8fb-2bbbc06450c5
 
 Here we have an animated heatmap that displays how home values have increased over time by state. As you can see, the mean values on the right go up over time, and different states actually take on different home values in comparison to other states over time. The darker the state, the higher the mean is for that state. 
 
@@ -95,16 +91,16 @@ Here we have an animated heatmap that displays how home values have increased ov
 
 <img width="400" alt="Screenshot 2024-03-28 at 2 11 15 PM" src="https://github.com/cdmoseley/Housing_Zillow/assets/161170070/80de3f46-3b2e-4369-a63c-4a787cd72e80">
 
-Here I analyzed the fluctuations in home values according to the time of year. I was curious if the month or weather played any factors on the home values. If you look at the bar graph on the left, that shows they are all about the same across the board. However, the line graph to the right of that is a data pull of 3 years, specifically 2015 - 2018, looking at Raleigh, NC. The data appears to be mostly linear, but we do see tiny fluctuations around the same time of year and see on average the the fall months appear to have a slightly sharper increase. 
+In this analysis, I explored fluctuations in home values concerning the time of year, aiming to discern whether factors such as month or weather exerted any notable influence. The bar graph on the left provides a comprehensive overview, indicating relatively consistent values across different time periods.
 
-While further research on other cities is needed to come to a deterministic solution, this initial conclusion that season doesn't play a huge factor is actually helpful to the Military, specifically since soldiers don't have a ton of autonomy to choose when they buy/sell to their PCS orders largely being dictated by higher headquarters. 
+However, the line graph adjacent to it draws from a three-year dataset spanning from 2015 to 2018 and focuses specifically on Raleigh, NC. Here, we observe a predominantly linear trend, punctuated by minor fluctuations occurring around certain times of the year. Notably, the fall months seem to exhibit a slightly sharper increase on average.
+
+While it's imperative to conduct further research encompassing additional cities to arrive at a conclusive understanding, this initial finding—that seasonal variations may not significantly impact home values—holds practical significance, particularly for military personnel. Given the constrained autonomy soldiers often face in timing their home transactions, dictated largely by PCS orders from higher headquarters, this insight proves invaluable in informing housing decisions amidst shifting seasons.
 
 # ROI Formula for this Project 
 <img width="550" alt="Screenshot 2024-03-28 at 2 11 59 PM" src="https://github.com/cdmoseley/Housing_Zillow/assets/161170070/22d05450-fe87-4949-ba67-bbe9a23c2900">
 
-So now moving into Return On Investment or ROI. 
-
-For the sake of this model, I provided a very basic calculation for ROI. I just said it was the percent growth of the selling price vs. the cost to buy the house. 
+Now, let's talk about Return On Investment (ROI). To keep things simple, I've come up with a basic calculation method for this model. ROI is basically just the percent increase in the selling price compared to what you originally paid for the house. It's a straightforward way to see how your investment is doing.
 
 ## Assumptions
 There are a few important assumptions I made here. 
